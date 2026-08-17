@@ -1,0 +1,2298 @@
+{
+  "stage": "sections",
+  "instructions": "Review each generated section against its verification record. Set 'decision' to 'approved' or 'flagged'. In strict mode the report will not render until every section is approved; in advisory mode a flagged section is excluded and the report is marked as not reviewed.",
+  "meta": {
+    "report_type": "pader",
+    "written_at": "2026-08-16 23:17 UTC"
+  },
+  "entries": {
+    "narrative_summary": {
+      "decision": "pending",
+      "note": "",
+      "heading": "Narrative Summary and Analysis",
+      "model": "gemini-3.6-flash",
+      "text": "During the reporting period from 2024-12-27 to 2025-12-26, a total of 1,024 cases were received. Serious cases accounted for 1,023 cases (99.9% of 1,024), while non-serious cases accounted for 1 case (0.1% of 1,024). Cases meeting expedited (15-day Alert) reporting criteria comprised 1,023 cases (99.9% of 1,024). A fatal outcome was reported in 68 cases (6.6% of 1,024).\n\nThe ten most frequently reported reactions by number of cases, out of 1,024 cases, were acute kidney injury (80 cases [7.8%]), drug ineffective (54 cases [5.3%]), hypotension (46 cases [4.5%]), drug interaction (43 cases [4.2%]), dyspnoea (38 cases [3.7%]), bradycardia (37 cases [3.6%]), dizziness (36 cases [3.5%]), fatigue (33 cases [3.2%]), off label use (31 cases [3.0%]), and diarrhoea (30 cases [2.9%]). Acute kidney injury was the most frequently reported reaction term.\n\nThe classification of reactions as labelled or unlabelled could not be assessed because determining expectedness requires the approved product label or CCDS, which was not supplied.\n\nAcross all cases, 3,423 reaction events were reported. By outcome, recovered/resolved comprised 1,280 reaction events (37.4%), unknown comprised 1,033 reaction events (30.2%), not recovered/not resolved/ongoing comprised 536 reaction events (15.7%), recovering/resolving comprised 406 reaction events (11.9%), fatal comprised 134 reaction events (3.9%), and recovered/resolved with sequelae comprised 34 reaction events (1.0%). Recovered/resolved was the most frequently reported outcome for reaction events, while recovered/resolved with sequelae was the least frequently reported.",
+      "fact_ids": [
+        "period.label",
+        "cases.total",
+        "cases.serious",
+        "cases.non_serious",
+        "cases.expedited",
+        "cases.fatal",
+        "cases.top_reactions",
+        "events.total",
+        "events.by_outcome",
+        "absent.expectedness"
+      ],
+      "verification": {
+        "section_id": "narrative_summary",
+        "passed": true,
+        "claims_checked": 50,
+        "grounding_score": 1.0,
+        "matched_claims": [
+          {
+            "text": "2024-12-27",
+            "fact_ids": [
+              "period.label"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "2025-12-26",
+            "fact_ids": [
+              "period.label"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "1,024",
+            "fact_ids": [
+              "cases.top_reactions",
+              "cases.total"
+            ],
+            "cases_behind": 1024
+          },
+          {
+            "text": "1,023",
+            "fact_ids": [
+              "cases.expedited",
+              "cases.serious"
+            ],
+            "cases_behind": 1023
+          },
+          {
+            "text": "99.9%",
+            "fact_ids": [
+              "cases.expedited",
+              "cases.serious"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "1,024",
+            "fact_ids": [
+              "cases.top_reactions",
+              "cases.total"
+            ],
+            "cases_behind": 1024
+          },
+          {
+            "text": "1",
+            "fact_ids": [
+              "cases.non_serious"
+            ],
+            "cases_behind": 1
+          },
+          {
+            "text": "0.1%",
+            "fact_ids": [
+              "cases.non_serious"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "1,024",
+            "fact_ids": [
+              "cases.top_reactions",
+              "cases.total"
+            ],
+            "cases_behind": 1024
+          },
+          {
+            "text": "15",
+            "fact_ids": [
+              "cases.expedited"
+            ],
+            "cases_behind": 1023
+          },
+          {
+            "text": "1,023",
+            "fact_ids": [
+              "cases.expedited",
+              "cases.serious"
+            ],
+            "cases_behind": 1023
+          },
+          {
+            "text": "99.9%",
+            "fact_ids": [
+              "cases.expedited",
+              "cases.serious"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "1,024",
+            "fact_ids": [
+              "cases.top_reactions",
+              "cases.total"
+            ],
+            "cases_behind": 1024
+          },
+          {
+            "text": "68",
+            "fact_ids": [
+              "cases.fatal"
+            ],
+            "cases_behind": 68
+          },
+          {
+            "text": "6.6%",
+            "fact_ids": [
+              "cases.fatal"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "1,024",
+            "fact_ids": [
+              "cases.top_reactions",
+              "cases.total"
+            ],
+            "cases_behind": 1024
+          },
+          {
+            "text": "1,024",
+            "fact_ids": [
+              "cases.top_reactions",
+              "cases.total"
+            ],
+            "cases_behind": 1024
+          },
+          {
+            "text": "80",
+            "fact_ids": [
+              "cases.top_reactions"
+            ],
+            "cases_behind": 1024
+          },
+          {
+            "text": "7.8%",
+            "fact_ids": [
+              "cases.top_reactions"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "54",
+            "fact_ids": [
+              "cases.top_reactions"
+            ],
+            "cases_behind": 1024
+          },
+          {
+            "text": "5.3%",
+            "fact_ids": [
+              "cases.top_reactions"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "46",
+            "fact_ids": [
+              "cases.top_reactions"
+            ],
+            "cases_behind": 1024
+          },
+          {
+            "text": "4.5%",
+            "fact_ids": [
+              "cases.top_reactions"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "43",
+            "fact_ids": [
+              "cases.top_reactions"
+            ],
+            "cases_behind": 1024
+          },
+          {
+            "text": "4.2%",
+            "fact_ids": [
+              "cases.top_reactions"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "38",
+            "fact_ids": [
+              "cases.top_reactions"
+            ],
+            "cases_behind": 1024
+          },
+          {
+            "text": "3.7%",
+            "fact_ids": [
+              "cases.top_reactions"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "37",
+            "fact_ids": [
+              "cases.top_reactions"
+            ],
+            "cases_behind": 1024
+          },
+          {
+            "text": "3.6%",
+            "fact_ids": [
+              "cases.top_reactions"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "36",
+            "fact_ids": [
+              "cases.top_reactions"
+            ],
+            "cases_behind": 1024
+          },
+          {
+            "text": "3.5%",
+            "fact_ids": [
+              "cases.top_reactions"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "33",
+            "fact_ids": [
+              "cases.top_reactions"
+            ],
+            "cases_behind": 1024
+          },
+          {
+            "text": "3.2%",
+            "fact_ids": [
+              "cases.top_reactions"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "31",
+            "fact_ids": [
+              "cases.top_reactions"
+            ],
+            "cases_behind": 1024
+          },
+          {
+            "text": "3.0%",
+            "fact_ids": [
+              "cases.top_reactions"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "30",
+            "fact_ids": [
+              "cases.top_reactions"
+            ],
+            "cases_behind": 1024
+          },
+          {
+            "text": "2.9%",
+            "fact_ids": [
+              "cases.top_reactions"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "3,423",
+            "fact_ids": [
+              "events.by_outcome",
+              "events.total"
+            ],
+            "cases_behind": 1024
+          },
+          {
+            "text": "1,280",
+            "fact_ids": [
+              "events.by_outcome"
+            ],
+            "cases_behind": 1024
+          },
+          {
+            "text": "37.4%",
+            "fact_ids": [
+              "events.by_outcome"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "1,033",
+            "fact_ids": [
+              "events.by_outcome"
+            ],
+            "cases_behind": 1024
+          },
+          {
+            "text": "30.2%",
+            "fact_ids": [
+              "events.by_outcome"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "536",
+            "fact_ids": [
+              "events.by_outcome"
+            ],
+            "cases_behind": 1024
+          },
+          {
+            "text": "15.7%",
+            "fact_ids": [
+              "events.by_outcome"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "406",
+            "fact_ids": [
+              "events.by_outcome"
+            ],
+            "cases_behind": 1024
+          },
+          {
+            "text": "11.9%",
+            "fact_ids": [
+              "events.by_outcome"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "134",
+            "fact_ids": [
+              "events.by_outcome"
+            ],
+            "cases_behind": 1024
+          },
+          {
+            "text": "3.9%",
+            "fact_ids": [
+              "events.by_outcome"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "34",
+            "fact_ids": [
+              "events.by_outcome"
+            ],
+            "cases_behind": 1024
+          },
+          {
+            "text": "1.0%",
+            "fact_ids": [
+              "events.by_outcome"
+            ],
+            "cases_behind": 0
+          }
+        ],
+        "violations": []
+      },
+      "fingerprint": "63893bffc9e78a2cca25c527fb5b6d11602f9ebeecf47d9cc4e2167ded22916f"
+    },
+    "case_summary": {
+      "decision": "pending",
+      "note": "",
+      "heading": "Summary Analysis of Cases",
+      "model": "gemini-3.6-flash",
+      "text": "The case series comprised 1,024 cases in total, of which 1,023 cases (99.9%) were serious and 1 case (0.1%) was non-serious. Spontaneous reports accounted for 1,014 cases (99.0%), while 10 cases (1.0%) originated from studies.\n\nPhysicians were the most frequent primary reporters, submitting 492 cases (48.0%), followed by pharmacists with 255 cases (24.9%), other health professionals with 162 cases (15.8%), and consumers or non-health professionals with 115 cases (11.2%).\n\nThe patient population was predominantly elderly, with 676 cases (66.0%) reported in patients aged 65 years or older. Adults aged 18 to <65 years accounted for 249 cases (24.3%). Paediatric categories represented smaller proportions: Infant (28 days to <2 years) accounted for 6 cases (0.6%), Adolescent (12 to <18 years) for 6 cases (0.6%), and Child (2 to <12 years) for 4 cases (0.4%). Age was recorded as unknown for 83 cases (8.1%). Females represented 503 cases (49.1%) and males represented 493 cases (48.1%), with sex reported as unknown for 28 cases (2.7%).\n\nBy location of occurrence, the largest reported grouping was eu with 342 cases (33.4%); these cases were reported under a regional label and cannot be attributed to an individual country. Among individual countries, the highest case counts were reported from the united kingdom with 278 cases (27.1%), france with 185 cases (18.1%), canada with 55 cases (5.4%), italy with 51 cases (5.0%), and germany with 33 cases (3.2%). Lower case counts were reported from spain with 24 cases (2.3%), poland with 18 cases (1.8%), portugal with 8 cases (0.8%), the united states with 4 cases (0.4%), and ie with 3 cases (0.3%). Country of occurrence was unknown for 7 cases (0.7%).",
+      "fact_ids": [
+        "cases.total",
+        "cases.serious",
+        "cases.non_serious",
+        "cases.by_age_group",
+        "cases.by_sex",
+        "cases.by_country",
+        "cases.by_reporter_qualification",
+        "cases.by_report_type"
+      ],
+      "verification": {
+        "section_id": "case_summary",
+        "passed": true,
+        "claims_checked": 68,
+        "grounding_score": 1.0,
+        "matched_claims": [
+          {
+            "text": "1,024",
+            "fact_ids": [
+              "cases.by_age_group",
+              "cases.by_country",
+              "cases.by_report_type",
+              "cases.by_reporter_qualification",
+              "cases.by_sex",
+              "cases.total"
+            ],
+            "cases_behind": 1024
+          },
+          {
+            "text": "1,023",
+            "fact_ids": [
+              "cases.serious"
+            ],
+            "cases_behind": 1023
+          },
+          {
+            "text": "99.9%",
+            "fact_ids": [
+              "cases.serious"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "1",
+            "fact_ids": [
+              "cases.by_country",
+              "cases.non_serious"
+            ],
+            "cases_behind": 1024
+          },
+          {
+            "text": "0.1%",
+            "fact_ids": [
+              "cases.by_country",
+              "cases.non_serious"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "1,014",
+            "fact_ids": [
+              "cases.by_report_type"
+            ],
+            "cases_behind": 1024
+          },
+          {
+            "text": "99.0%",
+            "fact_ids": [
+              "cases.by_report_type"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "10",
+            "fact_ids": [
+              "cases.by_report_type"
+            ],
+            "cases_behind": 1024
+          },
+          {
+            "text": "1.0%",
+            "fact_ids": [
+              "cases.by_report_type"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "492",
+            "fact_ids": [
+              "cases.by_reporter_qualification"
+            ],
+            "cases_behind": 1024
+          },
+          {
+            "text": "48.0%",
+            "fact_ids": [
+              "cases.by_reporter_qualification"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "255",
+            "fact_ids": [
+              "cases.by_reporter_qualification"
+            ],
+            "cases_behind": 1024
+          },
+          {
+            "text": "24.9%",
+            "fact_ids": [
+              "cases.by_reporter_qualification"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "162",
+            "fact_ids": [
+              "cases.by_reporter_qualification"
+            ],
+            "cases_behind": 1024
+          },
+          {
+            "text": "15.8%",
+            "fact_ids": [
+              "cases.by_reporter_qualification"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "115",
+            "fact_ids": [
+              "cases.by_reporter_qualification"
+            ],
+            "cases_behind": 1024
+          },
+          {
+            "text": "11.2%",
+            "fact_ids": [
+              "cases.by_reporter_qualification"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "676",
+            "fact_ids": [
+              "cases.by_age_group"
+            ],
+            "cases_behind": 1024
+          },
+          {
+            "text": "66.0%",
+            "fact_ids": [
+              "cases.by_age_group"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "65",
+            "fact_ids": [
+              "cases.by_age_group"
+            ],
+            "cases_behind": 1024
+          },
+          {
+            "text": "18",
+            "fact_ids": [
+              "cases.by_age_group",
+              "cases.by_country"
+            ],
+            "cases_behind": 1024
+          },
+          {
+            "text": "65",
+            "fact_ids": [
+              "cases.by_age_group"
+            ],
+            "cases_behind": 1024
+          },
+          {
+            "text": "249",
+            "fact_ids": [
+              "cases.by_age_group"
+            ],
+            "cases_behind": 1024
+          },
+          {
+            "text": "24.3%",
+            "fact_ids": [
+              "cases.by_age_group"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "28",
+            "fact_ids": [
+              "cases.by_age_group",
+              "cases.by_sex"
+            ],
+            "cases_behind": 1024
+          },
+          {
+            "text": "2",
+            "fact_ids": [
+              "cases.by_age_group",
+              "cases.by_country"
+            ],
+            "cases_behind": 1024
+          },
+          {
+            "text": "6",
+            "fact_ids": [
+              "cases.by_age_group"
+            ],
+            "cases_behind": 1024
+          },
+          {
+            "text": "0.6%",
+            "fact_ids": [
+              "cases.by_age_group"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "12",
+            "fact_ids": [
+              "cases.by_age_group"
+            ],
+            "cases_behind": 1024
+          },
+          {
+            "text": "18",
+            "fact_ids": [
+              "cases.by_age_group",
+              "cases.by_country"
+            ],
+            "cases_behind": 1024
+          },
+          {
+            "text": "6",
+            "fact_ids": [
+              "cases.by_age_group"
+            ],
+            "cases_behind": 1024
+          },
+          {
+            "text": "0.6%",
+            "fact_ids": [
+              "cases.by_age_group"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "2",
+            "fact_ids": [
+              "cases.by_age_group",
+              "cases.by_country"
+            ],
+            "cases_behind": 1024
+          },
+          {
+            "text": "12",
+            "fact_ids": [
+              "cases.by_age_group"
+            ],
+            "cases_behind": 1024
+          },
+          {
+            "text": "4",
+            "fact_ids": [
+              "cases.by_age_group",
+              "cases.by_country"
+            ],
+            "cases_behind": 1024
+          },
+          {
+            "text": "0.4%",
+            "fact_ids": [
+              "cases.by_age_group",
+              "cases.by_country"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "83",
+            "fact_ids": [
+              "cases.by_age_group"
+            ],
+            "cases_behind": 1024
+          },
+          {
+            "text": "8.1%",
+            "fact_ids": [
+              "cases.by_age_group"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "503",
+            "fact_ids": [
+              "cases.by_sex"
+            ],
+            "cases_behind": 1024
+          },
+          {
+            "text": "49.1%",
+            "fact_ids": [
+              "cases.by_sex"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "493",
+            "fact_ids": [
+              "cases.by_sex"
+            ],
+            "cases_behind": 1024
+          },
+          {
+            "text": "48.1%",
+            "fact_ids": [
+              "cases.by_sex"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "28",
+            "fact_ids": [
+              "cases.by_age_group",
+              "cases.by_sex"
+            ],
+            "cases_behind": 1024
+          },
+          {
+            "text": "2.7%",
+            "fact_ids": [
+              "cases.by_sex"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "342",
+            "fact_ids": [
+              "cases.by_country"
+            ],
+            "cases_behind": 1024
+          },
+          {
+            "text": "33.4%",
+            "fact_ids": [
+              "cases.by_country"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "278",
+            "fact_ids": [
+              "cases.by_country"
+            ],
+            "cases_behind": 1024
+          },
+          {
+            "text": "27.1%",
+            "fact_ids": [
+              "cases.by_country"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "185",
+            "fact_ids": [
+              "cases.by_country"
+            ],
+            "cases_behind": 1024
+          },
+          {
+            "text": "18.1%",
+            "fact_ids": [
+              "cases.by_country"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "55",
+            "fact_ids": [
+              "cases.by_country"
+            ],
+            "cases_behind": 1024
+          },
+          {
+            "text": "5.4%",
+            "fact_ids": [
+              "cases.by_country"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "51",
+            "fact_ids": [
+              "cases.by_country"
+            ],
+            "cases_behind": 1024
+          },
+          {
+            "text": "5.0%",
+            "fact_ids": [
+              "cases.by_country"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "33",
+            "fact_ids": [
+              "cases.by_country"
+            ],
+            "cases_behind": 1024
+          },
+          {
+            "text": "3.2%",
+            "fact_ids": [
+              "cases.by_country"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "24",
+            "fact_ids": [
+              "cases.by_country"
+            ],
+            "cases_behind": 1024
+          },
+          {
+            "text": "2.3%",
+            "fact_ids": [
+              "cases.by_country"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "18",
+            "fact_ids": [
+              "cases.by_age_group",
+              "cases.by_country"
+            ],
+            "cases_behind": 1024
+          },
+          {
+            "text": "1.8%",
+            "fact_ids": [
+              "cases.by_country"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "8",
+            "fact_ids": [
+              "cases.by_country"
+            ],
+            "cases_behind": 1024
+          },
+          {
+            "text": "0.8%",
+            "fact_ids": [
+              "cases.by_country"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "4",
+            "fact_ids": [
+              "cases.by_age_group",
+              "cases.by_country"
+            ],
+            "cases_behind": 1024
+          },
+          {
+            "text": "0.4%",
+            "fact_ids": [
+              "cases.by_age_group",
+              "cases.by_country"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "3",
+            "fact_ids": [
+              "cases.by_country"
+            ],
+            "cases_behind": 1024
+          },
+          {
+            "text": "0.3%",
+            "fact_ids": [
+              "cases.by_country"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "7",
+            "fact_ids": [
+              "cases.by_country"
+            ],
+            "cases_behind": 1024
+          },
+          {
+            "text": "0.7%",
+            "fact_ids": [
+              "cases.by_country"
+            ],
+            "cases_behind": 0
+          }
+        ],
+        "violations": []
+      },
+      "fingerprint": "12aed5259b1bfba9fede62101122616c0a6a23575125f3fe56777cf0dc94a918"
+    },
+    "reaction_analysis": {
+      "decision": "pending",
+      "note": "",
+      "heading": "Reaction / Adverse Event Analysis",
+      "model": "gemini-3.6-flash",
+      "text": "During the reporting period, a total of 3,423 reaction events were reported across 1,121 distinct MedDRA preferred terms. When including superseded case versions across all source rows, 3,642 reaction events were recorded. \n\nAnalysis of reactions by MedDRA System Organ Class was not available from the supplied dataset because the dataset carries patient_reaction_reactionmeddrapt only; no System Organ Class field and no MedDRA hierarchy were supplied, so terms are reported at preferred-term level.\n\nAmong the total 1,024 cases, the most frequently reported reaction by number of cases was acute kidney injury (80 cases, 7.8%), followed by drug ineffective (54 cases, 5.3%), hypotension (46 cases, 4.5%), drug interaction (43 cases, 4.2%), dyspnoea (38 cases, 3.7%), bradycardia (37 cases, 3.6%), dizziness (36 cases, 3.5%), fatigue (33 cases, 3.2%), off label use (31 cases, 3.0%), and diarrhoea (30 cases, 2.9%).\n\nAmong the 1,023 serious cases, the distribution of the most frequently reported reactions was similar. The top 10 reported reactions among serious cases were acute kidney injury (80 cases, 7.8%), drug ineffective (53 cases, 5.2%), hypotension (46 cases, 4.5%), drug interaction (43 cases, 4.2%), dyspnoea (38 cases, 3.7%), bradycardia (37 cases, 3.6%), dizziness (36 cases, 3.5%), fatigue (33 cases, 3.2%), off label use (31 cases, 3.0%), and diarrhoea (30 cases, 2.9%). The only difference observed between total cases and serious cases was a lower count for drug ineffective, which accounted for 53 cases in serious cases compared to 54 cases overall.\n\nRegarding the reported outcomes of the 3,423 reaction events, 1,280 reaction events (37.4%) were recovered/resolved, 1,033 reaction events (30.2%) were unknown, 536 reaction events (15.7%) were not recovered/not resolved/ongoing, 406 reaction events (11.9%) were recovering/resolving, 134 reaction events (3.9%) were fatal, and 34 reaction events (1.0%) were recovered/resolved with sequelae.",
+      "fact_ids": [
+        "cases.top_reactions",
+        "cases.top_serious_reactions",
+        "events.total",
+        "events.total_all_rows",
+        "events.distinct_terms",
+        "events.by_outcome",
+        "absent.system_organ_class"
+      ],
+      "verification": {
+        "section_id": "reaction_analysis",
+        "passed": true,
+        "claims_checked": 61,
+        "grounding_score": 1.0,
+        "matched_claims": [
+          {
+            "text": "3,423",
+            "fact_ids": [
+              "events.by_outcome",
+              "events.total"
+            ],
+            "cases_behind": 1024
+          },
+          {
+            "text": "1,121",
+            "fact_ids": [
+              "events.distinct_terms"
+            ],
+            "cases_behind": 1024
+          },
+          {
+            "text": "3,642",
+            "fact_ids": [
+              "events.total_all_rows"
+            ],
+            "cases_behind": 1068
+          },
+          {
+            "text": "1,024",
+            "fact_ids": [
+              "cases.top_reactions"
+            ],
+            "cases_behind": 1024
+          },
+          {
+            "text": "80",
+            "fact_ids": [
+              "cases.top_reactions",
+              "cases.top_serious_reactions"
+            ],
+            "cases_behind": 1024
+          },
+          {
+            "text": "7.8%",
+            "fact_ids": [
+              "cases.top_reactions",
+              "cases.top_serious_reactions"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "54",
+            "fact_ids": [
+              "cases.top_reactions"
+            ],
+            "cases_behind": 1024
+          },
+          {
+            "text": "5.3%",
+            "fact_ids": [
+              "cases.top_reactions"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "46",
+            "fact_ids": [
+              "cases.top_reactions",
+              "cases.top_serious_reactions"
+            ],
+            "cases_behind": 1024
+          },
+          {
+            "text": "4.5%",
+            "fact_ids": [
+              "cases.top_reactions",
+              "cases.top_serious_reactions"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "43",
+            "fact_ids": [
+              "cases.top_reactions",
+              "cases.top_serious_reactions"
+            ],
+            "cases_behind": 1024
+          },
+          {
+            "text": "4.2%",
+            "fact_ids": [
+              "cases.top_reactions",
+              "cases.top_serious_reactions"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "38",
+            "fact_ids": [
+              "cases.top_reactions",
+              "cases.top_serious_reactions"
+            ],
+            "cases_behind": 1024
+          },
+          {
+            "text": "3.7%",
+            "fact_ids": [
+              "cases.top_reactions",
+              "cases.top_serious_reactions"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "37",
+            "fact_ids": [
+              "cases.top_reactions",
+              "cases.top_serious_reactions"
+            ],
+            "cases_behind": 1024
+          },
+          {
+            "text": "3.6%",
+            "fact_ids": [
+              "cases.top_reactions",
+              "cases.top_serious_reactions"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "36",
+            "fact_ids": [
+              "cases.top_reactions",
+              "cases.top_serious_reactions"
+            ],
+            "cases_behind": 1024
+          },
+          {
+            "text": "3.5%",
+            "fact_ids": [
+              "cases.top_reactions",
+              "cases.top_serious_reactions"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "33",
+            "fact_ids": [
+              "cases.top_reactions",
+              "cases.top_serious_reactions"
+            ],
+            "cases_behind": 1024
+          },
+          {
+            "text": "3.2%",
+            "fact_ids": [
+              "cases.top_reactions",
+              "cases.top_serious_reactions"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "31",
+            "fact_ids": [
+              "cases.top_reactions",
+              "cases.top_serious_reactions"
+            ],
+            "cases_behind": 1024
+          },
+          {
+            "text": "3.0%",
+            "fact_ids": [
+              "cases.top_reactions",
+              "cases.top_serious_reactions"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "30",
+            "fact_ids": [
+              "cases.top_reactions",
+              "cases.top_serious_reactions"
+            ],
+            "cases_behind": 1024
+          },
+          {
+            "text": "2.9%",
+            "fact_ids": [
+              "cases.top_reactions",
+              "cases.top_serious_reactions"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "1,023",
+            "fact_ids": [
+              "cases.top_serious_reactions"
+            ],
+            "cases_behind": 1023
+          },
+          {
+            "text": "10",
+            "fact_ids": [
+              "cases.top_reactions",
+              "cases.top_serious_reactions"
+            ],
+            "cases_behind": 1024
+          },
+          {
+            "text": "80",
+            "fact_ids": [
+              "cases.top_reactions",
+              "cases.top_serious_reactions"
+            ],
+            "cases_behind": 1024
+          },
+          {
+            "text": "7.8%",
+            "fact_ids": [
+              "cases.top_reactions",
+              "cases.top_serious_reactions"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "53",
+            "fact_ids": [
+              "cases.top_serious_reactions"
+            ],
+            "cases_behind": 1023
+          },
+          {
+            "text": "5.2%",
+            "fact_ids": [
+              "cases.top_serious_reactions"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "46",
+            "fact_ids": [
+              "cases.top_reactions",
+              "cases.top_serious_reactions"
+            ],
+            "cases_behind": 1024
+          },
+          {
+            "text": "4.5%",
+            "fact_ids": [
+              "cases.top_reactions",
+              "cases.top_serious_reactions"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "43",
+            "fact_ids": [
+              "cases.top_reactions",
+              "cases.top_serious_reactions"
+            ],
+            "cases_behind": 1024
+          },
+          {
+            "text": "4.2%",
+            "fact_ids": [
+              "cases.top_reactions",
+              "cases.top_serious_reactions"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "38",
+            "fact_ids": [
+              "cases.top_reactions",
+              "cases.top_serious_reactions"
+            ],
+            "cases_behind": 1024
+          },
+          {
+            "text": "3.7%",
+            "fact_ids": [
+              "cases.top_reactions",
+              "cases.top_serious_reactions"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "37",
+            "fact_ids": [
+              "cases.top_reactions",
+              "cases.top_serious_reactions"
+            ],
+            "cases_behind": 1024
+          },
+          {
+            "text": "3.6%",
+            "fact_ids": [
+              "cases.top_reactions",
+              "cases.top_serious_reactions"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "36",
+            "fact_ids": [
+              "cases.top_reactions",
+              "cases.top_serious_reactions"
+            ],
+            "cases_behind": 1024
+          },
+          {
+            "text": "3.5%",
+            "fact_ids": [
+              "cases.top_reactions",
+              "cases.top_serious_reactions"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "33",
+            "fact_ids": [
+              "cases.top_reactions",
+              "cases.top_serious_reactions"
+            ],
+            "cases_behind": 1024
+          },
+          {
+            "text": "3.2%",
+            "fact_ids": [
+              "cases.top_reactions",
+              "cases.top_serious_reactions"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "31",
+            "fact_ids": [
+              "cases.top_reactions",
+              "cases.top_serious_reactions"
+            ],
+            "cases_behind": 1024
+          },
+          {
+            "text": "3.0%",
+            "fact_ids": [
+              "cases.top_reactions",
+              "cases.top_serious_reactions"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "30",
+            "fact_ids": [
+              "cases.top_reactions",
+              "cases.top_serious_reactions"
+            ],
+            "cases_behind": 1024
+          },
+          {
+            "text": "2.9%",
+            "fact_ids": [
+              "cases.top_reactions",
+              "cases.top_serious_reactions"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "53",
+            "fact_ids": [
+              "cases.top_serious_reactions"
+            ],
+            "cases_behind": 1023
+          },
+          {
+            "text": "54",
+            "fact_ids": [
+              "cases.top_reactions"
+            ],
+            "cases_behind": 1024
+          },
+          {
+            "text": "3,423",
+            "fact_ids": [
+              "events.by_outcome",
+              "events.total"
+            ],
+            "cases_behind": 1024
+          },
+          {
+            "text": "1,280",
+            "fact_ids": [
+              "events.by_outcome"
+            ],
+            "cases_behind": 1024
+          },
+          {
+            "text": "37.4%",
+            "fact_ids": [
+              "events.by_outcome"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "1,033",
+            "fact_ids": [
+              "events.by_outcome"
+            ],
+            "cases_behind": 1024
+          },
+          {
+            "text": "30.2%",
+            "fact_ids": [
+              "events.by_outcome"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "536",
+            "fact_ids": [
+              "events.by_outcome"
+            ],
+            "cases_behind": 1024
+          },
+          {
+            "text": "15.7%",
+            "fact_ids": [
+              "events.by_outcome"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "406",
+            "fact_ids": [
+              "events.by_outcome"
+            ],
+            "cases_behind": 1024
+          },
+          {
+            "text": "11.9%",
+            "fact_ids": [
+              "events.by_outcome"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "134",
+            "fact_ids": [
+              "events.by_outcome"
+            ],
+            "cases_behind": 1024
+          },
+          {
+            "text": "3.9%",
+            "fact_ids": [
+              "events.by_outcome"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "34",
+            "fact_ids": [
+              "events.by_outcome"
+            ],
+            "cases_behind": 1024
+          },
+          {
+            "text": "1.0%",
+            "fact_ids": [
+              "events.by_outcome"
+            ],
+            "cases_behind": 0
+          }
+        ],
+        "violations": []
+      },
+      "fingerprint": "68d71cdb50f365812d02fc763186d697c4a76c5cce0bde81883de57767ff9993"
+    },
+    "serious_cases_alerts": {
+      "decision": "pending",
+      "note": "",
+      "heading": "Serious Cases and 15-Day Alert Reports",
+      "model": "gemini-3.6-flash",
+      "text": "During the reporting period, 1,023 cases (99.9% of 1,024) were classified as serious cases. The same number, 1,023 cases (99.9% of 1,024), met expedited (15-day Alert) reporting criteria. Cases reporting a fatal outcome accounted for 68 cases (6.6% of 1,024).\n\nThe regulatory seriousness criteria are not mutually exclusive, and a single case may meet multiple criteria. Among the 1,023 serious cases, the criteria met were: other medically important condition in 905 cases (88.5%), hospitalisation (initial or prolonged) in 482 cases (47.1%), life-threatening in 105 cases (10.3%), death in 68 cases (6.6%), persistent or significant disability in 44 cases (4.3%), and congenital anomaly in 7 cases (0.7%).\n\nThe most frequently reported reaction among serious cases was acute kidney injury, reported in 80 cases (7.8%). The remaining top ten reactions reported in serious cases were drug ineffective in 53 cases (5.2%), hypotension in 46 cases (4.5%), drug interaction in 43 cases (4.2%), dyspnoea in 38 cases (3.7%), bradycardia in 37 cases (3.6%), dizziness in 36 cases (3.5%), fatigue in 33 cases (3.2%), off label use in 31 cases (3.0%), and diarrhoea in 30 cases (2.9%).\n\nTwo items expected for this section could not be assessed from the supplied data. The classification of reactions as labelled or unlabelled was not available because determining expectedness requires the approved product label or CCDS, which was not supplied. Cumulative case counts from previous reporting periods were not provided because only the current reporting interval was supplied; these figures are reported as unavailable rather than zero to avoid asserting that no earlier cases exist.",
+      "fact_ids": [
+        "cases.serious",
+        "cases.expedited",
+        "cases.fatal",
+        "cases.by_seriousness_criterion",
+        "cases.top_serious_reactions",
+        "absent.expectedness",
+        "absent.cumulative_prior_period"
+      ],
+      "verification": {
+        "section_id": "serious_cases_alerts",
+        "passed": true,
+        "claims_checked": 43,
+        "grounding_score": 1.0,
+        "matched_claims": [
+          {
+            "text": "1,023",
+            "fact_ids": [
+              "cases.by_seriousness_criterion",
+              "cases.expedited",
+              "cases.serious",
+              "cases.top_serious_reactions"
+            ],
+            "cases_behind": 1023
+          },
+          {
+            "text": "99.9%",
+            "fact_ids": [
+              "cases.expedited",
+              "cases.serious"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "1,024",
+            "fact_ids": [
+              "cases.total"
+            ],
+            "cases_behind": 1024
+          },
+          {
+            "text": "1,023",
+            "fact_ids": [
+              "cases.by_seriousness_criterion",
+              "cases.expedited",
+              "cases.serious",
+              "cases.top_serious_reactions"
+            ],
+            "cases_behind": 1023
+          },
+          {
+            "text": "99.9%",
+            "fact_ids": [
+              "cases.expedited",
+              "cases.serious"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "1,024",
+            "fact_ids": [
+              "cases.total"
+            ],
+            "cases_behind": 1024
+          },
+          {
+            "text": "15",
+            "fact_ids": [
+              "cases.expedited"
+            ],
+            "cases_behind": 1023
+          },
+          {
+            "text": "68",
+            "fact_ids": [
+              "cases.by_seriousness_criterion",
+              "cases.fatal"
+            ],
+            "cases_behind": 1023
+          },
+          {
+            "text": "6.6%",
+            "fact_ids": [
+              "cases.by_seriousness_criterion",
+              "cases.fatal"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "1,024",
+            "fact_ids": [
+              "cases.total"
+            ],
+            "cases_behind": 1024
+          },
+          {
+            "text": "1,023",
+            "fact_ids": [
+              "cases.by_seriousness_criterion",
+              "cases.expedited",
+              "cases.serious",
+              "cases.top_serious_reactions"
+            ],
+            "cases_behind": 1023
+          },
+          {
+            "text": "905",
+            "fact_ids": [
+              "cases.by_seriousness_criterion"
+            ],
+            "cases_behind": 1023
+          },
+          {
+            "text": "88.5%",
+            "fact_ids": [
+              "cases.by_seriousness_criterion"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "482",
+            "fact_ids": [
+              "cases.by_seriousness_criterion"
+            ],
+            "cases_behind": 1023
+          },
+          {
+            "text": "47.1%",
+            "fact_ids": [
+              "cases.by_seriousness_criterion"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "105",
+            "fact_ids": [
+              "cases.by_seriousness_criterion"
+            ],
+            "cases_behind": 1023
+          },
+          {
+            "text": "10.3%",
+            "fact_ids": [
+              "cases.by_seriousness_criterion"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "68",
+            "fact_ids": [
+              "cases.by_seriousness_criterion",
+              "cases.fatal"
+            ],
+            "cases_behind": 1023
+          },
+          {
+            "text": "6.6%",
+            "fact_ids": [
+              "cases.by_seriousness_criterion",
+              "cases.fatal"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "44",
+            "fact_ids": [
+              "cases.by_seriousness_criterion"
+            ],
+            "cases_behind": 1023
+          },
+          {
+            "text": "4.3%",
+            "fact_ids": [
+              "cases.by_seriousness_criterion"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "7",
+            "fact_ids": [
+              "cases.by_seriousness_criterion"
+            ],
+            "cases_behind": 1023
+          },
+          {
+            "text": "0.7%",
+            "fact_ids": [
+              "cases.by_seriousness_criterion"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "80",
+            "fact_ids": [
+              "cases.top_serious_reactions"
+            ],
+            "cases_behind": 1023
+          },
+          {
+            "text": "7.8%",
+            "fact_ids": [
+              "cases.top_serious_reactions"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "53",
+            "fact_ids": [
+              "cases.top_serious_reactions"
+            ],
+            "cases_behind": 1023
+          },
+          {
+            "text": "5.2%",
+            "fact_ids": [
+              "cases.top_serious_reactions"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "46",
+            "fact_ids": [
+              "cases.top_serious_reactions"
+            ],
+            "cases_behind": 1023
+          },
+          {
+            "text": "4.5%",
+            "fact_ids": [
+              "cases.top_serious_reactions"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "43",
+            "fact_ids": [
+              "cases.top_serious_reactions"
+            ],
+            "cases_behind": 1023
+          },
+          {
+            "text": "4.2%",
+            "fact_ids": [
+              "cases.top_serious_reactions"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "38",
+            "fact_ids": [
+              "cases.top_serious_reactions"
+            ],
+            "cases_behind": 1023
+          },
+          {
+            "text": "3.7%",
+            "fact_ids": [
+              "cases.top_serious_reactions"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "37",
+            "fact_ids": [
+              "cases.top_serious_reactions"
+            ],
+            "cases_behind": 1023
+          },
+          {
+            "text": "3.6%",
+            "fact_ids": [
+              "cases.top_serious_reactions"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "36",
+            "fact_ids": [
+              "cases.top_serious_reactions"
+            ],
+            "cases_behind": 1023
+          },
+          {
+            "text": "3.5%",
+            "fact_ids": [
+              "cases.top_serious_reactions"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "33",
+            "fact_ids": [
+              "cases.top_serious_reactions"
+            ],
+            "cases_behind": 1023
+          },
+          {
+            "text": "3.2%",
+            "fact_ids": [
+              "cases.top_serious_reactions"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "31",
+            "fact_ids": [
+              "cases.top_serious_reactions"
+            ],
+            "cases_behind": 1023
+          },
+          {
+            "text": "3.0%",
+            "fact_ids": [
+              "cases.top_serious_reactions"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "30",
+            "fact_ids": [
+              "cases.top_serious_reactions"
+            ],
+            "cases_behind": 1023
+          },
+          {
+            "text": "2.9%",
+            "fact_ids": [
+              "cases.top_serious_reactions"
+            ],
+            "cases_behind": 0
+          }
+        ],
+        "violations": []
+      },
+      "fingerprint": "18b97ddee927b79887a91bd517af59b4aaae49c093e34495b202b7e8309f0209"
+    },
+    "trends": {
+      "decision": "pending",
+      "note": "",
+      "heading": "Trends and Important Observations",
+      "model": "gemini-3.6-flash",
+      "text": "During the reporting period from 2024-12-27 to 2025-12-26, monthly case receipt volumes varied across the year. Total monthly cases were lowest in 2024-12 with 21 cases (2.1%) and reached a peak in 2025-07 with 109 cases (10.6%), followed by 2025-10 with 102 cases (10.0%) and 2025-02 with 94 cases (9.2%). Serious cases received by month followed a similar pattern, ranging from 21 cases (2.1%) in 2024-12 to 108 cases (10.6%) in 2025-07, with 102 cases (10.0%) in 2025-10 and 94 cases (9.2%) in 2025-02.\n\nComparing the leading reactions between the two halves of the reporting period reveals changes in reporting counts across several terms. Cases reporting Acute kidney injury showed the largest decrease, falling from 48 cases (9.4%) among 511 cases in the first half of the reporting period to 32 cases (6.2%) among 513 cases in the second half. Conversely, cases reporting Dyspnoea increased from 15 cases (2.9%) in the first half to 23 cases (4.5%) in the second half. Cases reporting Bradycardia rose from 15 cases (2.9%) to 22 cases (4.3%), cases reporting Fatigue increased from 13 cases (2.5%) to 20 cases (3.9%), and cases reporting Off label use increased from 12 cases (2.3%) to 19 cases (3.7%).\n\nOther leading reaction terms remained relatively stable between the two periods. Cases reporting Drug ineffective rose from 25 cases (4.9%) in the first half to 29 cases (5.7%) in the second half, while cases reporting Hypotension rose from 21 cases (4.1%) to 25 cases (4.9%). Cases reporting Dizziness changed from 16 cases (3.1%) to 20 cases (3.9%). Cases reporting Drug interaction shifted from 22 cases (4.3%) to 21 cases (4.1%), and cases reporting Diarrhoea changed from 16 cases (3.1%) to 14 cases (2.7%).",
+      "fact_ids": [
+        "period.label",
+        "cases.by_month",
+        "cases.serious_by_month",
+        "cases.top_reactions_first_half",
+        "cases.top_reactions_second_half"
+      ],
+      "verification": {
+        "section_id": "trends",
+        "passed": true,
+        "claims_checked": 68,
+        "grounding_score": 1.0,
+        "matched_claims": [
+          {
+            "text": "2024-12-27",
+            "fact_ids": [
+              "period.label"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "2025-12-26",
+            "fact_ids": [
+              "period.label"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "2024-12",
+            "fact_ids": [
+              "cases.by_month",
+              "cases.serious_by_month"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "2025-07",
+            "fact_ids": [
+              "cases.by_month",
+              "cases.serious_by_month"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "2025-10",
+            "fact_ids": [
+              "cases.by_month",
+              "cases.serious_by_month"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "2025-02",
+            "fact_ids": [
+              "cases.by_month",
+              "cases.serious_by_month"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "2024-12",
+            "fact_ids": [
+              "cases.by_month",
+              "cases.serious_by_month"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "2025-07",
+            "fact_ids": [
+              "cases.by_month",
+              "cases.serious_by_month"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "2025-10",
+            "fact_ids": [
+              "cases.by_month",
+              "cases.serious_by_month"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "2025-02",
+            "fact_ids": [
+              "cases.by_month",
+              "cases.serious_by_month"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "21",
+            "fact_ids": [
+              "cases.by_month",
+              "cases.serious_by_month",
+              "cases.top_reactions_first_half",
+              "cases.top_reactions_second_half"
+            ],
+            "cases_behind": 1024
+          },
+          {
+            "text": "2.1%",
+            "fact_ids": [
+              "cases.by_month",
+              "cases.serious_by_month"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "109",
+            "fact_ids": [
+              "cases.by_month"
+            ],
+            "cases_behind": 1024
+          },
+          {
+            "text": "10.6%",
+            "fact_ids": [
+              "cases.by_month",
+              "cases.serious_by_month"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "102",
+            "fact_ids": [
+              "cases.by_month",
+              "cases.serious_by_month"
+            ],
+            "cases_behind": 1024
+          },
+          {
+            "text": "10.0%",
+            "fact_ids": [
+              "cases.by_month",
+              "cases.serious_by_month"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "94",
+            "fact_ids": [
+              "cases.by_month",
+              "cases.serious_by_month"
+            ],
+            "cases_behind": 1024
+          },
+          {
+            "text": "9.2%",
+            "fact_ids": [
+              "cases.by_month",
+              "cases.serious_by_month"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "21",
+            "fact_ids": [
+              "cases.by_month",
+              "cases.serious_by_month",
+              "cases.top_reactions_first_half",
+              "cases.top_reactions_second_half"
+            ],
+            "cases_behind": 1024
+          },
+          {
+            "text": "2.1%",
+            "fact_ids": [
+              "cases.by_month",
+              "cases.serious_by_month"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "108",
+            "fact_ids": [
+              "cases.serious_by_month"
+            ],
+            "cases_behind": 1023
+          },
+          {
+            "text": "10.6%",
+            "fact_ids": [
+              "cases.by_month",
+              "cases.serious_by_month"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "102",
+            "fact_ids": [
+              "cases.by_month",
+              "cases.serious_by_month"
+            ],
+            "cases_behind": 1024
+          },
+          {
+            "text": "10.0%",
+            "fact_ids": [
+              "cases.by_month",
+              "cases.serious_by_month"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "94",
+            "fact_ids": [
+              "cases.by_month",
+              "cases.serious_by_month"
+            ],
+            "cases_behind": 1024
+          },
+          {
+            "text": "9.2%",
+            "fact_ids": [
+              "cases.by_month",
+              "cases.serious_by_month"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "48",
+            "fact_ids": [
+              "cases.top_reactions_first_half"
+            ],
+            "cases_behind": 511
+          },
+          {
+            "text": "9.4%",
+            "fact_ids": [
+              "cases.top_reactions_first_half"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "511",
+            "fact_ids": [
+              "cases.top_reactions_first_half"
+            ],
+            "cases_behind": 511
+          },
+          {
+            "text": "32",
+            "fact_ids": [
+              "cases.top_reactions_second_half"
+            ],
+            "cases_behind": 513
+          },
+          {
+            "text": "6.2%",
+            "fact_ids": [
+              "cases.by_month",
+              "cases.top_reactions_second_half"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "513",
+            "fact_ids": [
+              "cases.top_reactions_second_half"
+            ],
+            "cases_behind": 513
+          },
+          {
+            "text": "15",
+            "fact_ids": [
+              "cases.top_reactions_first_half"
+            ],
+            "cases_behind": 511
+          },
+          {
+            "text": "2.9%",
+            "fact_ids": [
+              "cases.top_reactions_first_half"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "23",
+            "fact_ids": [
+              "cases.top_reactions_second_half"
+            ],
+            "cases_behind": 513
+          },
+          {
+            "text": "4.5%",
+            "fact_ids": [
+              "cases.top_reactions_second_half"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "15",
+            "fact_ids": [
+              "cases.top_reactions_first_half"
+            ],
+            "cases_behind": 511
+          },
+          {
+            "text": "2.9%",
+            "fact_ids": [
+              "cases.top_reactions_first_half"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "22",
+            "fact_ids": [
+              "cases.top_reactions_first_half",
+              "cases.top_reactions_second_half"
+            ],
+            "cases_behind": 513
+          },
+          {
+            "text": "4.3%",
+            "fact_ids": [
+              "cases.top_reactions_first_half",
+              "cases.top_reactions_second_half"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "13",
+            "fact_ids": [
+              "cases.top_reactions_first_half"
+            ],
+            "cases_behind": 511
+          },
+          {
+            "text": "2.5%",
+            "fact_ids": [
+              "cases.top_reactions_first_half"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "20",
+            "fact_ids": [
+              "cases.top_reactions_second_half"
+            ],
+            "cases_behind": 513
+          },
+          {
+            "text": "3.9%",
+            "fact_ids": [
+              "cases.top_reactions_second_half"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "12",
+            "fact_ids": [
+              "cases.top_reactions_first_half"
+            ],
+            "cases_behind": 511
+          },
+          {
+            "text": "2.3%",
+            "fact_ids": [
+              "cases.top_reactions_first_half"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "19",
+            "fact_ids": [
+              "cases.top_reactions_second_half"
+            ],
+            "cases_behind": 513
+          },
+          {
+            "text": "3.7%",
+            "fact_ids": [
+              "cases.top_reactions_second_half"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "25",
+            "fact_ids": [
+              "cases.top_reactions_first_half",
+              "cases.top_reactions_second_half"
+            ],
+            "cases_behind": 513
+          },
+          {
+            "text": "4.9%",
+            "fact_ids": [
+              "cases.top_reactions_first_half",
+              "cases.top_reactions_second_half"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "29",
+            "fact_ids": [
+              "cases.top_reactions_second_half"
+            ],
+            "cases_behind": 513
+          },
+          {
+            "text": "5.7%",
+            "fact_ids": [
+              "cases.top_reactions_second_half"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "21",
+            "fact_ids": [
+              "cases.by_month",
+              "cases.serious_by_month",
+              "cases.top_reactions_first_half",
+              "cases.top_reactions_second_half"
+            ],
+            "cases_behind": 1024
+          },
+          {
+            "text": "4.1%",
+            "fact_ids": [
+              "cases.top_reactions_first_half",
+              "cases.top_reactions_second_half"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "25",
+            "fact_ids": [
+              "cases.top_reactions_first_half",
+              "cases.top_reactions_second_half"
+            ],
+            "cases_behind": 513
+          },
+          {
+            "text": "4.9%",
+            "fact_ids": [
+              "cases.top_reactions_first_half",
+              "cases.top_reactions_second_half"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "16",
+            "fact_ids": [
+              "cases.top_reactions_first_half"
+            ],
+            "cases_behind": 511
+          },
+          {
+            "text": "3.1%",
+            "fact_ids": [
+              "cases.top_reactions_first_half"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "20",
+            "fact_ids": [
+              "cases.top_reactions_second_half"
+            ],
+            "cases_behind": 513
+          },
+          {
+            "text": "3.9%",
+            "fact_ids": [
+              "cases.top_reactions_second_half"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "22",
+            "fact_ids": [
+              "cases.top_reactions_first_half",
+              "cases.top_reactions_second_half"
+            ],
+            "cases_behind": 513
+          },
+          {
+            "text": "4.3%",
+            "fact_ids": [
+              "cases.top_reactions_first_half",
+              "cases.top_reactions_second_half"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "21",
+            "fact_ids": [
+              "cases.by_month",
+              "cases.serious_by_month",
+              "cases.top_reactions_first_half",
+              "cases.top_reactions_second_half"
+            ],
+            "cases_behind": 1024
+          },
+          {
+            "text": "4.1%",
+            "fact_ids": [
+              "cases.top_reactions_first_half",
+              "cases.top_reactions_second_half"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "16",
+            "fact_ids": [
+              "cases.top_reactions_first_half"
+            ],
+            "cases_behind": 511
+          },
+          {
+            "text": "3.1%",
+            "fact_ids": [
+              "cases.top_reactions_first_half"
+            ],
+            "cases_behind": 0
+          },
+          {
+            "text": "14",
+            "fact_ids": [
+              "cases.top_reactions_second_half"
+            ],
+            "cases_behind": 513
+          },
+          {
+            "text": "2.7%",
+            "fact_ids": [
+              "cases.top_reactions_second_half"
+            ],
+            "cases_behind": 0
+          }
+        ],
+        "violations": []
+      },
+      "fingerprint": "d4e1bc2298a33e97fed167bf1fe2d9b7671f268aeedf84750541d9b2f32bae3c"
+    }
+  }
+}

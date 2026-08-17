@@ -1,0 +1,9 @@
+# Normalise line endings in the repository to LF, regardless of the platform
+# a checkout happens on. Without this, a Windows checkout commits CRLF and the
+# whole tree reads as modified on any other machine.
+* text=auto eol=lf
+
+# Generated reports are text and should diff cleanly.
+*.md text
+*.yaml text
+*.json text

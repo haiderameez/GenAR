@@ -1,0 +1,1256 @@
+{
+  "stage": "analysis",
+  "instructions": "Review each figure below against its 'method' line. Set 'decision' to 'approved' or 'flagged' and add a 'note' if useful. A flagged figure is withheld from every section that declared it, and those sections will not be generated. Decisions persist across runs; if a figure's value changes, its decision resets to pending and the previous value is recorded.",
+  "meta": {
+    "report_type": "pader",
+    "written_at": "2026-08-16 23:26 UTC"
+  },
+  "entries": {
+    "absent.cumulative_prior_period": {
+      "decision": "pending",
+      "note": "",
+      "label": "Cumulative case counts from previous reporting periods",
+      "value": null,
+      "grain": "none",
+      "scope": null,
+      "unit": null,
+      "status": "not_provided",
+      "method": "only the current reporting interval was supplied; cumulative figures are reported as unavailable rather than as zero, which would assert that no earlier cases exist",
+      "cases_behind": 0,
+      "sample_case_ids": [],
+      "fingerprint": "null"
+    },
+    "absent.expectedness": {
+      "decision": "pending",
+      "note": "",
+      "label": "Classification of reactions as labelled or unlabelled",
+      "value": null,
+      "grain": "none",
+      "scope": null,
+      "unit": null,
+      "status": "not_available",
+      "method": "determining expectedness requires the approved product label or CCDS, which was not supplied",
+      "cases_behind": 0,
+      "sample_case_ids": [],
+      "fingerprint": "null"
+    },
+    "absent.history_of_actions": {
+      "decision": "pending",
+      "note": "",
+      "label": "Actions taken for safety reasons during the reporting period",
+      "value": null,
+      "grain": "none",
+      "scope": null,
+      "unit": null,
+      "status": "not_provided",
+      "method": "no labelling changes, regulatory communications or safety-related studies were supplied with this dataset",
+      "cases_behind": 0,
+      "sample_case_ids": [],
+      "fingerprint": "null"
+    },
+    "absent.system_organ_class": {
+      "decision": "pending",
+      "note": "",
+      "label": "Analysis of reactions by MedDRA System Organ Class",
+      "value": null,
+      "grain": "none",
+      "scope": null,
+      "unit": null,
+      "status": "not_available",
+      "method": "the dataset carries patient_reaction_reactionmeddrapt only; no System Organ Class field and no MedDRA hierarchy were supplied, so terms are reported at preferred-term level",
+      "cases_behind": 0,
+      "sample_case_ids": [],
+      "fingerprint": "null"
+    },
+    "cases.by_age_group": {
+      "decision": "pending",
+      "note": "",
+      "label": "Cases by age group",
+      "value": {
+        "strata": [
+          [
+            "Infant (28 days to <2 years)",
+            6
+          ],
+          [
+            "Child (2 to <12 years)",
+            4
+          ],
+          [
+            "Adolescent (12 to <18 years)",
+            6
+          ],
+          [
+            "Adult (18 to <65 years)",
+            249
+          ],
+          [
+            "Elderly (>=65 years)",
+            676
+          ],
+          [
+            "Unknown",
+            83
+          ]
+        ],
+        "total": 1024
+      },
+      "grain": "case",
+      "scope": null,
+      "unit": "cases",
+      "status": "computed",
+      "method": "ICH E2B age strata derived from patient_patientonsetage normalised to years",
+      "cases_behind": 1024,
+      "sample_case_ids": [
+        "24780403",
+        "24780599",
+        "24780680",
+        "24784771",
+        "24784845",
+        "24784920",
+        "24784985",
+        "24784989",
+        "24787006",
+        "24787240"
+      ],
+      "fingerprint": "{\"strata\": [[\"Infant (28 days to <2 years)\", 6], [\"Child (2 to <12 years)\", 4], [\"Adolescent (12 to <18 years)\", 6], [\"Adult (18 to <65 years)\", 249], [\"Elderly (>=65 years)\", 676], [\"Unknown\", 83]], \"total\": 1024}"
+    },
+    "cases.by_country": {
+      "decision": "pending",
+      "note": "",
+      "label": "Cases by country or region of occurrence",
+      "value": {
+        "strata": [
+          [
+            "eu",
+            342
+          ],
+          [
+            "united kingdom",
+            278
+          ],
+          [
+            "france",
+            185
+          ],
+          [
+            "canada",
+            55
+          ],
+          [
+            "italy",
+            51
+          ],
+          [
+            "germany",
+            33
+          ],
+          [
+            "spain",
+            24
+          ],
+          [
+            "poland",
+            18
+          ],
+          [
+            "portugal",
+            8
+          ],
+          [
+            "unknown",
+            7
+          ],
+          [
+            "united states",
+            4
+          ],
+          [
+            "ie",
+            3
+          ],
+          [
+            "belgium",
+            2
+          ],
+          [
+            "hr",
+            2
+          ],
+          [
+            "ro",
+            2
+          ],
+          [
+            "sa",
+            2
+          ],
+          [
+            "sweden",
+            2
+          ],
+          [
+            "ua",
+            2
+          ],
+          [
+            "australia",
+            1
+          ],
+          [
+            "china",
+            1
+          ]
+        ],
+        "total": 1024
+      },
+      "grain": "case",
+      "scope": null,
+      "unit": "cases",
+      "status": "computed",
+      "method": "count of cases by occurcountry as supplied; 'eu' is a region rather than a country and is reported under its own label",
+      "cases_behind": 1024,
+      "sample_case_ids": [
+        "24780403",
+        "24780599",
+        "24780680",
+        "24784771",
+        "24784845",
+        "24784920",
+        "24784985",
+        "24784989",
+        "24787006",
+        "24787240"
+      ],
+      "fingerprint": "{\"strata\": [[\"eu\", 342], [\"united kingdom\", 278], [\"france\", 185], [\"canada\", 55], [\"italy\", 51], [\"germany\", 33], [\"spain\", 24], [\"poland\", 18], [\"portugal\", 8], [\"unknown\", 7], [\"united states\", 4], [\"ie\", 3], [\"belgium\", 2], [\"hr\", 2], [\"ro\", 2], [\"sa\", 2], [\"sweden\", 2], [\"ua\", 2], [\"australia\", 1], [\"china\", 1]], \"total\": 1024}"
+    },
+    "cases.by_month": {
+      "decision": "pending",
+      "note": "",
+      "label": "Cases received by month",
+      "value": {
+        "strata": [
+          [
+            "2024-12",
+            21
+          ],
+          [
+            "2025-01",
+            75
+          ],
+          [
+            "2025-02",
+            94
+          ],
+          [
+            "2025-03",
+            83
+          ],
+          [
+            "2025-04",
+            78
+          ],
+          [
+            "2025-05",
+            80
+          ],
+          [
+            "2025-06",
+            84
+          ],
+          [
+            "2025-07",
+            109
+          ],
+          [
+            "2025-08",
+            64
+          ],
+          [
+            "2025-09",
+            76
+          ],
+          [
+            "2025-10",
+            102
+          ],
+          [
+            "2025-11",
+            75
+          ],
+          [
+            "2025-12",
+            83
+          ]
+        ],
+        "total": 1024
+      },
+      "grain": "case",
+      "scope": null,
+      "unit": "cases",
+      "status": "computed",
+      "method": "count of cases by calendar month of receivedate",
+      "cases_behind": 1024,
+      "sample_case_ids": [
+        "24780403",
+        "24780599",
+        "24780680",
+        "24784771",
+        "24784845",
+        "24784920",
+        "24784985",
+        "24784989",
+        "24787006",
+        "24787240"
+      ],
+      "fingerprint": "{\"strata\": [[\"2024-12\", 21], [\"2025-01\", 75], [\"2025-02\", 94], [\"2025-03\", 83], [\"2025-04\", 78], [\"2025-05\", 80], [\"2025-06\", 84], [\"2025-07\", 109], [\"2025-08\", 64], [\"2025-09\", 76], [\"2025-10\", 102], [\"2025-11\", 75], [\"2025-12\", 83]], \"total\": 1024}"
+    },
+    "cases.by_report_type": {
+      "decision": "pending",
+      "note": "",
+      "label": "Cases by report type",
+      "value": {
+        "strata": [
+          [
+            "spontaneous report",
+            1014
+          ],
+          [
+            "report from study",
+            10
+          ]
+        ],
+        "total": 1024
+      },
+      "grain": "case",
+      "scope": null,
+      "unit": "cases",
+      "status": "computed",
+      "method": "count of cases by reporttype",
+      "cases_behind": 1024,
+      "sample_case_ids": [
+        "24780403",
+        "24780599",
+        "24780680",
+        "24784771",
+        "24784845",
+        "24784920",
+        "24784985",
+        "24784989",
+        "24787006",
+        "24787240"
+      ],
+      "fingerprint": "{\"strata\": [[\"spontaneous report\", 1014], [\"report from study\", 10]], \"total\": 1024}"
+    },
+    "cases.by_reporter_qualification": {
+      "decision": "pending",
+      "note": "",
+      "label": "Cases by reporter qualification",
+      "value": {
+        "strata": [
+          [
+            "physician",
+            492
+          ],
+          [
+            "pharmacist",
+            255
+          ],
+          [
+            "other health professional",
+            162
+          ],
+          [
+            "consumer or non-health professional",
+            115
+          ]
+        ],
+        "total": 1024
+      },
+      "grain": "case",
+      "scope": null,
+      "unit": "cases",
+      "status": "computed",
+      "method": "count of cases by primarysource_qualification",
+      "cases_behind": 1024,
+      "sample_case_ids": [
+        "24780403",
+        "24780599",
+        "24780680",
+        "24784771",
+        "24784845",
+        "24784920",
+        "24784985",
+        "24784989",
+        "24787006",
+        "24787240"
+      ],
+      "fingerprint": "{\"strata\": [[\"physician\", 492], [\"pharmacist\", 255], [\"other health professional\", 162], [\"consumer or non-health professional\", 115]], \"total\": 1024}"
+    },
+    "cases.by_seriousness_criterion": {
+      "decision": "pending",
+      "note": "",
+      "label": "Serious cases by regulatory seriousness criterion (criteria are not mutually exclusive)",
+      "value": {
+        "strata": [
+          [
+            "Other medically important condition",
+            905
+          ],
+          [
+            "Hospitalisation (initial or prolonged)",
+            482
+          ],
+          [
+            "Life-threatening",
+            105
+          ],
+          [
+            "Death",
+            68
+          ],
+          [
+            "Persistent or significant disability",
+            44
+          ],
+          [
+            "Congenital anomaly",
+            7
+          ]
+        ],
+        "total": 1023
+      },
+      "grain": "case",
+      "scope": null,
+      "unit": "cases",
+      "status": "computed",
+      "method": "count of serious cases carrying each seriousness flag; one case may meet several",
+      "cases_behind": 1023,
+      "sample_case_ids": [
+        "24780403",
+        "24780599",
+        "24780680",
+        "24784771",
+        "24784845",
+        "24784920",
+        "24784985",
+        "24784989",
+        "24787006",
+        "24787240"
+      ],
+      "fingerprint": "{\"strata\": [[\"Other medically important condition\", 905], [\"Hospitalisation (initial or prolonged)\", 482], [\"Life-threatening\", 105], [\"Death\", 68], [\"Persistent or significant disability\", 44], [\"Congenital anomaly\", 7]], \"total\": 1023}"
+    },
+    "cases.by_sex": {
+      "decision": "pending",
+      "note": "",
+      "label": "Cases by sex",
+      "value": {
+        "strata": [
+          [
+            "female",
+            503
+          ],
+          [
+            "male",
+            493
+          ],
+          [
+            "unknown",
+            28
+          ]
+        ],
+        "total": 1024
+      },
+      "grain": "case",
+      "scope": null,
+      "unit": "cases",
+      "status": "computed",
+      "method": "count of cases by patient_patientsex; blank recorded as 'unknown'",
+      "cases_behind": 1024,
+      "sample_case_ids": [
+        "24780403",
+        "24780599",
+        "24780680",
+        "24784771",
+        "24784845",
+        "24784920",
+        "24784985",
+        "24784989",
+        "24787006",
+        "24787240"
+      ],
+      "fingerprint": "{\"strata\": [[\"female\", 503], [\"male\", 493], [\"unknown\", 28]], \"total\": 1024}"
+    },
+    "cases.expedited": {
+      "decision": "pending",
+      "note": "",
+      "label": "Cases meeting expedited (15-day Alert) reporting criteria",
+      "value": 1023,
+      "grain": "case",
+      "scope": null,
+      "unit": "cases",
+      "status": "computed",
+      "method": "count of cases where fulfillexpeditecriteria == 'yes'",
+      "cases_behind": 1023,
+      "sample_case_ids": [
+        "24780403",
+        "24780599",
+        "24780680",
+        "24784771",
+        "24784845",
+        "24784920",
+        "24784985",
+        "24784989",
+        "24787006",
+        "24787240"
+      ],
+      "fingerprint": "1023"
+    },
+    "cases.fatal": {
+      "decision": "pending",
+      "note": "",
+      "label": "Cases reporting a fatal outcome",
+      "value": 68,
+      "grain": "case",
+      "scope": null,
+      "unit": "cases",
+      "status": "computed",
+      "method": "count of cases where seriousnessdeath == 'yes'",
+      "cases_behind": 68,
+      "sample_case_ids": [
+        "24813219",
+        "24833425",
+        "24843792",
+        "24887406",
+        "24892198",
+        "24902758",
+        "24907505",
+        "24921420",
+        "24940601",
+        "24984238"
+      ],
+      "fingerprint": "68"
+    },
+    "cases.listing": {
+      "decision": "pending",
+      "note": "",
+      "label": "Case index",
+      "value": "1024 records (not expanded)",
+      "grain": "case",
+      "scope": null,
+      "unit": "cases",
+      "status": "computed",
+      "method": "one row per case, ordered by receivedate then case identifier",
+      "cases_behind": 1024,
+      "sample_case_ids": [
+        "24780403",
+        "24780599",
+        "24780680",
+        "24784771",
+        "24784845",
+        "24784920",
+        "24784985",
+        "24784989",
+        "24787006",
+        "24787240"
+      ],
+      "fingerprint": "\"1024 records (not expanded)\""
+    },
+    "cases.non_serious": {
+      "decision": "pending",
+      "note": "",
+      "label": "Non-serious cases",
+      "value": 1,
+      "grain": "case",
+      "scope": null,
+      "unit": "cases",
+      "status": "computed",
+      "method": "count of cases where serious != 'serious'",
+      "cases_behind": 1,
+      "sample_case_ids": [
+        "25503311"
+      ],
+      "fingerprint": "1"
+    },
+    "cases.serious": {
+      "decision": "pending",
+      "note": "",
+      "label": "Serious cases",
+      "value": 1023,
+      "grain": "case",
+      "scope": null,
+      "unit": "cases",
+      "status": "computed",
+      "method": "count of cases where serious == 'serious'",
+      "cases_behind": 1023,
+      "sample_case_ids": [
+        "24780403",
+        "24780599",
+        "24780680",
+        "24784771",
+        "24784845",
+        "24784920",
+        "24784985",
+        "24784989",
+        "24787006",
+        "24787240"
+      ],
+      "fingerprint": "1023"
+    },
+    "cases.serious_by_month": {
+      "decision": "pending",
+      "note": "",
+      "label": "Serious cases received by month",
+      "value": {
+        "strata": [
+          [
+            "2024-12",
+            21
+          ],
+          [
+            "2025-01",
+            75
+          ],
+          [
+            "2025-02",
+            94
+          ],
+          [
+            "2025-03",
+            83
+          ],
+          [
+            "2025-04",
+            78
+          ],
+          [
+            "2025-05",
+            80
+          ],
+          [
+            "2025-06",
+            84
+          ],
+          [
+            "2025-07",
+            108
+          ],
+          [
+            "2025-08",
+            64
+          ],
+          [
+            "2025-09",
+            76
+          ],
+          [
+            "2025-10",
+            102
+          ],
+          [
+            "2025-11",
+            75
+          ],
+          [
+            "2025-12",
+            83
+          ]
+        ],
+        "total": 1023
+      },
+      "grain": "case",
+      "scope": null,
+      "unit": "cases",
+      "status": "computed",
+      "method": "count of serious cases by calendar month of receivedate",
+      "cases_behind": 1023,
+      "sample_case_ids": [
+        "24780403",
+        "24780599",
+        "24780680",
+        "24784771",
+        "24784845",
+        "24784920",
+        "24784985",
+        "24784989",
+        "24787006",
+        "24787240"
+      ],
+      "fingerprint": "{\"strata\": [[\"2024-12\", 21], [\"2025-01\", 75], [\"2025-02\", 94], [\"2025-03\", 83], [\"2025-04\", 78], [\"2025-05\", 80], [\"2025-06\", 84], [\"2025-07\", 108], [\"2025-08\", 64], [\"2025-09\", 76], [\"2025-10\", 102], [\"2025-11\", 75], [\"2025-12\", 83]], \"total\": 1023}"
+    },
+    "cases.top_reactions": {
+      "decision": "pending",
+      "note": "",
+      "label": "Most frequently reported reactions, by number of cases (top 10)",
+      "value": {
+        "strata": [
+          [
+            "Acute kidney injury",
+            80
+          ],
+          [
+            "Drug ineffective",
+            54
+          ],
+          [
+            "Hypotension",
+            46
+          ],
+          [
+            "Drug interaction",
+            43
+          ],
+          [
+            "Dyspnoea",
+            38
+          ],
+          [
+            "Bradycardia",
+            37
+          ],
+          [
+            "Dizziness",
+            36
+          ],
+          [
+            "Fatigue",
+            33
+          ],
+          [
+            "Off label use",
+            31
+          ],
+          [
+            "Diarrhoea",
+            30
+          ]
+        ],
+        "total": 1024
+      },
+      "grain": "case",
+      "scope": null,
+      "unit": "cases",
+      "status": "computed",
+      "method": "count of distinct cases reporting each MedDRA preferred term",
+      "cases_behind": 1024,
+      "sample_case_ids": [
+        "24780403",
+        "24780599",
+        "24780680",
+        "24784771",
+        "24784845",
+        "24784920",
+        "24784985",
+        "24784989",
+        "24787006",
+        "24787240"
+      ],
+      "fingerprint": "{\"strata\": [[\"Acute kidney injury\", 80], [\"Drug ineffective\", 54], [\"Hypotension\", 46], [\"Drug interaction\", 43], [\"Dyspnoea\", 38], [\"Bradycardia\", 37], [\"Dizziness\", 36], [\"Fatigue\", 33], [\"Off label use\", 31], [\"Diarrhoea\", 30]], \"total\": 1024}"
+    },
+    "cases.top_reactions_first_half": {
+      "decision": "pending",
+      "note": "",
+      "label": "Leading reactions in the first half of the reporting period",
+      "value": {
+        "strata": [
+          [
+            "Acute kidney injury",
+            48
+          ],
+          [
+            "Drug ineffective",
+            25
+          ],
+          [
+            "Hypotension",
+            21
+          ],
+          [
+            "Drug interaction",
+            22
+          ],
+          [
+            "Dyspnoea",
+            15
+          ],
+          [
+            "Bradycardia",
+            15
+          ],
+          [
+            "Dizziness",
+            16
+          ],
+          [
+            "Fatigue",
+            13
+          ],
+          [
+            "Off label use",
+            12
+          ],
+          [
+            "Diarrhoea",
+            16
+          ]
+        ],
+        "total": 511
+      },
+      "grain": "case",
+      "scope": null,
+      "unit": "cases",
+      "status": "computed",
+      "method": "count of distinct cases reporting each leading term among cases received on or before 2025-06-27",
+      "cases_behind": 511,
+      "sample_case_ids": [
+        "24780403",
+        "24780599",
+        "24780680",
+        "24784771",
+        "24784845",
+        "24784920",
+        "24784985",
+        "24784989",
+        "24787006",
+        "24787240"
+      ],
+      "fingerprint": "{\"strata\": [[\"Acute kidney injury\", 48], [\"Drug ineffective\", 25], [\"Hypotension\", 21], [\"Drug interaction\", 22], [\"Dyspnoea\", 15], [\"Bradycardia\", 15], [\"Dizziness\", 16], [\"Fatigue\", 13], [\"Off label use\", 12], [\"Diarrhoea\", 16]], \"total\": 511}"
+    },
+    "cases.top_reactions_second_half": {
+      "decision": "pending",
+      "note": "",
+      "label": "Leading reactions in the second half of the reporting period",
+      "value": {
+        "strata": [
+          [
+            "Acute kidney injury",
+            32
+          ],
+          [
+            "Drug ineffective",
+            29
+          ],
+          [
+            "Hypotension",
+            25
+          ],
+          [
+            "Drug interaction",
+            21
+          ],
+          [
+            "Dyspnoea",
+            23
+          ],
+          [
+            "Bradycardia",
+            22
+          ],
+          [
+            "Dizziness",
+            20
+          ],
+          [
+            "Fatigue",
+            20
+          ],
+          [
+            "Off label use",
+            19
+          ],
+          [
+            "Diarrhoea",
+            14
+          ]
+        ],
+        "total": 513
+      },
+      "grain": "case",
+      "scope": null,
+      "unit": "cases",
+      "status": "computed",
+      "method": "count of distinct cases reporting each leading term in the remainder of the period",
+      "cases_behind": 513,
+      "sample_case_ids": [
+        "25490087",
+        "25493751",
+        "25493912",
+        "25496565",
+        "25496720",
+        "25497099",
+        "25497984",
+        "25497986",
+        "25497997",
+        "25498826"
+      ],
+      "fingerprint": "{\"strata\": [[\"Acute kidney injury\", 32], [\"Drug ineffective\", 29], [\"Hypotension\", 25], [\"Drug interaction\", 21], [\"Dyspnoea\", 23], [\"Bradycardia\", 22], [\"Dizziness\", 20], [\"Fatigue\", 20], [\"Off label use\", 19], [\"Diarrhoea\", 14]], \"total\": 513}"
+    },
+    "cases.top_serious_reactions": {
+      "decision": "pending",
+      "note": "",
+      "label": "Most frequently reported reactions among serious cases (top 10)",
+      "value": {
+        "strata": [
+          [
+            "Acute kidney injury",
+            80
+          ],
+          [
+            "Drug ineffective",
+            53
+          ],
+          [
+            "Hypotension",
+            46
+          ],
+          [
+            "Drug interaction",
+            43
+          ],
+          [
+            "Dyspnoea",
+            38
+          ],
+          [
+            "Bradycardia",
+            37
+          ],
+          [
+            "Dizziness",
+            36
+          ],
+          [
+            "Fatigue",
+            33
+          ],
+          [
+            "Off label use",
+            31
+          ],
+          [
+            "Diarrhoea",
+            30
+          ]
+        ],
+        "total": 1023
+      },
+      "grain": "case",
+      "scope": null,
+      "unit": "cases",
+      "status": "computed",
+      "method": "count of distinct serious cases reporting each MedDRA preferred term",
+      "cases_behind": 1023,
+      "sample_case_ids": [
+        "24780403",
+        "24780599",
+        "24780680",
+        "24784771",
+        "24784845",
+        "24784920",
+        "24784985",
+        "24784989",
+        "24787006",
+        "24787240"
+      ],
+      "fingerprint": "{\"strata\": [[\"Acute kidney injury\", 80], [\"Drug ineffective\", 53], [\"Hypotension\", 46], [\"Drug interaction\", 43], [\"Dyspnoea\", 38], [\"Bradycardia\", 37], [\"Dizziness\", 36], [\"Fatigue\", 33], [\"Off label use\", 31], [\"Diarrhoea\", 30]], \"total\": 1023}"
+    },
+    "cases.total": {
+      "decision": "pending",
+      "note": "",
+      "label": "Total cases",
+      "value": 1024,
+      "grain": "case",
+      "scope": null,
+      "unit": "cases",
+      "status": "computed",
+      "method": "count of distinct safetyreportid, highest version retained",
+      "cases_behind": 1024,
+      "sample_case_ids": [
+        "24780403",
+        "24780599",
+        "24780680",
+        "24784771",
+        "24784845",
+        "24784920",
+        "24784985",
+        "24784989",
+        "24787006",
+        "24787240"
+      ],
+      "fingerprint": "1024"
+    },
+    "events.by_outcome": {
+      "decision": "pending",
+      "note": "",
+      "label": "Reaction events by reported outcome",
+      "value": {
+        "strata": [
+          [
+            "recovered/resolved",
+            1280
+          ],
+          [
+            "unknown",
+            1033
+          ],
+          [
+            "not recovered/not resolved/ongoing",
+            536
+          ],
+          [
+            "recovering/resolving",
+            406
+          ],
+          [
+            "fatal",
+            134
+          ],
+          [
+            "recovered/resolved with sequelae",
+            34
+          ]
+        ],
+        "total": 3423
+      },
+      "grain": "event",
+      "scope": "deduplicated",
+      "unit": "reaction events",
+      "status": "computed",
+      "method": "count of reaction events by reactionoutcome, paired positionally with each reaction term",
+      "cases_behind": 1024,
+      "sample_case_ids": [
+        "24780403",
+        "24780599",
+        "24780680",
+        "24784771",
+        "24784845",
+        "24784920",
+        "24784985",
+        "24784989",
+        "24787006",
+        "24787240"
+      ],
+      "fingerprint": "{\"strata\": [[\"recovered/resolved\", 1280], [\"unknown\", 1033], [\"not recovered/not resolved/ongoing\", 536], [\"recovering/resolving\", 406], [\"fatal\", 134], [\"recovered/resolved with sequelae\", 34]], \"total\": 3423}"
+    },
+    "events.distinct_terms": {
+      "decision": "pending",
+      "note": "",
+      "label": "Distinct MedDRA preferred terms reported",
+      "value": 1121,
+      "grain": "event",
+      "scope": "deduplicated",
+      "unit": "preferred terms",
+      "status": "computed",
+      "method": "count of distinct MedDRA preferred terms across cases",
+      "cases_behind": 1024,
+      "sample_case_ids": [
+        "24780403",
+        "24780599",
+        "24780680",
+        "24784771",
+        "24784845",
+        "24784920",
+        "24784985",
+        "24784989",
+        "24787006",
+        "24787240"
+      ],
+      "fingerprint": "1121"
+    },
+    "events.total": {
+      "decision": "pending",
+      "note": "",
+      "label": "Reaction events reported",
+      "value": 3423,
+      "grain": "event",
+      "scope": "deduplicated",
+      "unit": "reaction events",
+      "status": "computed",
+      "method": "sum of reaction terms across cases, latest version of each case only",
+      "cases_behind": 1024,
+      "sample_case_ids": [
+        "24780403",
+        "24780599",
+        "24780680",
+        "24784771",
+        "24784845",
+        "24784920",
+        "24784985",
+        "24784989",
+        "24787006",
+        "24787240"
+      ],
+      "fingerprint": "3423"
+    },
+    "events.total_all_rows": {
+      "decision": "pending",
+      "note": "",
+      "label": "Reaction events across all source rows, superseded case versions included",
+      "value": 3642,
+      "grain": "event",
+      "scope": "all_rows",
+      "unit": "reaction events",
+      "status": "computed",
+      "method": "sum of reaction terms across every row in the source file",
+      "cases_behind": 1068,
+      "sample_case_ids": [
+        "24780403",
+        "24780599",
+        "24780680",
+        "24784771",
+        "24784845",
+        "24784920",
+        "24784985",
+        "24784989",
+        "24787006",
+        "24787240"
+      ],
+      "fingerprint": "3642"
+    },
+    "meta.data_quality": {
+      "decision": "pending",
+      "note": "",
+      "label": "Data-quality checks performed before analysis",
+      "value": "17 records (not expanded)",
+      "grain": "none",
+      "scope": null,
+      "unit": null,
+      "status": "computed",
+      "method": "checks run by validate.py against the source file before any analysis",
+      "cases_behind": 0,
+      "sample_case_ids": [],
+      "fingerprint": "\"17 records (not expanded)\""
+    },
+    "meta.dataset_provenance": {
+      "decision": "pending",
+      "note": "",
+      "label": "Source dataset",
+      "value": {
+        "path": "C:\\Users\\mdram\\Downloads\\Bisoprolol_icsr_sample_1068rows.xlsx",
+        "sha256": "1081ad4fc3250100757d6f7dd2b467835cff7ca96d03dca9867de2fede92b429",
+        "rows": 1068,
+        "cases": 1024
+      },
+      "grain": "none",
+      "scope": null,
+      "unit": null,
+      "status": "computed",
+      "method": "SHA-256 of the source file, with row and case counts as loaded",
+      "cases_behind": 0,
+      "sample_case_ids": [],
+      "fingerprint": "{\"cases\": 1024, \"path\": \"C:\\\\Users\\\\mdram\\\\Downloads\\\\Bisoprolol_icsr_sample_1068rows.xlsx\", \"rows\": 1068, \"sha256\": \"1081ad4fc3250100757d6f7dd2b467835cff7ca96d03dca9867de2fede92b429\"}"
+    },
+    "meta.regulatory_basis": {
+      "decision": "pending",
+      "note": "",
+      "label": "Regulatory basis",
+      "value": "21 CFR 314.80(c)(2)",
+      "grain": "none",
+      "scope": null,
+      "unit": null,
+      "status": "computed",
+      "method": "supplied in report configuration pader.yaml",
+      "cases_behind": 0,
+      "sample_case_ids": [],
+      "fingerprint": "\"21 CFR 314.80(c)(2)\""
+    },
+    "meta.report_title": {
+      "decision": "pending",
+      "note": "",
+      "label": "Report title",
+      "value": "Periodic Adverse Drug Experience Report (PADER)",
+      "grain": "none",
+      "scope": null,
+      "unit": null,
+      "status": "computed",
+      "method": "supplied in report configuration pader.yaml",
+      "cases_behind": 0,
+      "sample_case_ids": [],
+      "fingerprint": "\"Periodic Adverse Drug Experience Report (PADER)\""
+    },
+    "meta.report_type": {
+      "decision": "pending",
+      "note": "",
+      "label": "Report type",
+      "value": "PADER",
+      "grain": "none",
+      "scope": null,
+      "unit": null,
+      "status": "computed",
+      "method": "supplied in report configuration pader.yaml",
+      "cases_behind": 0,
+      "sample_case_ids": [],
+      "fingerprint": "\"PADER\""
+    },
+    "period.days": {
+      "decision": "pending",
+      "note": "",
+      "label": "Reporting period length in days",
+      "value": 365,
+      "grain": "none",
+      "scope": null,
+      "unit": null,
+      "status": "computed",
+      "method": "inclusive day count between first and last receivedate",
+      "cases_behind": 0,
+      "sample_case_ids": [],
+      "fingerprint": "365"
+    },
+    "period.end": {
+      "decision": "pending",
+      "note": "",
+      "label": "Reporting period end",
+      "value": "2025-12-26",
+      "grain": "none",
+      "scope": null,
+      "unit": null,
+      "status": "computed",
+      "method": "min/max of receivedate across cases",
+      "cases_behind": 0,
+      "sample_case_ids": [],
+      "fingerprint": "\"2025-12-26\""
+    },
+    "period.label": {
+      "decision": "pending",
+      "note": "",
+      "label": "Reporting period",
+      "value": "2024-12-27 to 2025-12-26",
+      "grain": "none",
+      "scope": null,
+      "unit": null,
+      "status": "computed",
+      "method": "min/max of receivedate across cases",
+      "cases_behind": 0,
+      "sample_case_ids": [],
+      "fingerprint": "\"2024-12-27 to 2025-12-26\""
+    },
+    "period.start": {
+      "decision": "pending",
+      "note": "",
+      "label": "Reporting period start",
+      "value": "2024-12-27",
+      "grain": "none",
+      "scope": null,
+      "unit": null,
+      "status": "computed",
+      "method": "min/max of receivedate across cases",
+      "cases_behind": 0,
+      "sample_case_ids": [],
+      "fingerprint": "\"2024-12-27\""
+    },
+    "product.name": {
+      "decision": "pending",
+      "note": "",
+      "label": "Product",
+      "value": "Bisoprolol",
+      "grain": "none",
+      "scope": null,
+      "unit": null,
+      "status": "computed",
+      "method": "supplied in report configuration pader.yaml",
+      "cases_behind": 0,
+      "sample_case_ids": [],
+      "fingerprint": "\"Bisoprolol\""
+    }
+  }
+}

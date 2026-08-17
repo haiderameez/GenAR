@@ -1,0 +1,138 @@
+report_type: psur_mini
+title: Periodic Safety Update Report (abbreviated)
+product: Bisoprolol
+regulatory_basis: EMA GVP Module VII
+
+sections:
+
+  - id: introduction
+    heading: Introduction and Reporting Interval
+    generator: deterministic
+    renderer: header_block
+    requires:
+      - meta.report_title
+      - meta.report_type
+      - meta.regulatory_basis
+      - product.name
+      - period.label
+      - period.start
+      - period.end
+      - period.days
+      - cases.total
+
+  - id: interval_case_volume
+    heading: Cases Received During the Interval
+    generator: llm
+    claim_level: derived
+    max_words: 260
+    requires:
+      - period.label
+      - cases.total
+      - cases.serious
+      - cases.non_serious
+      - cases.fatal
+      - cases.by_report_type
+      - cases.by_reporter_qualification
+      - absent.cumulative_prior_period
+    tables:
+      - cases.by_report_type
+      - cases.by_reporter_qualification
+    instructions: |
+      Summarise the cases received during the interval: how many, how they split
+      between serious and non-serious, how many reported a fatal outcome, and
+      the mix of sources they arrived from.
+
+      A periodic update report normally sets interval figures against cumulative
+      figures from earlier intervals. Those were not supplied here. State that
+      the report covers the interval only and that cumulative comparison could
+      not be performed, using the reason given. Do not present the interval
+      figures as if they were cumulative, and do not record the cumulative
+      figures as zero.
+
+  - id: reaction_tabulation
+    heading: Summary Tabulation of Adverse Reactions
+    generator: llm
+    claim_level: derived
+    max_words: 300
+    requires:
+      - events.total
+      - events.total_all_rows
+      - events.distinct_terms
+      - events.by_outcome
+      - cases.top_reactions
+      - cases.top_serious_reactions
+      - absent.system_organ_class
+    tables:
+      - cases.top_reactions
+      - cases.top_serious_reactions
+      - events.by_outcome
+    instructions: |
+      Present the reaction data as a tabulation summary.
+
+      Give the total number of reaction events and the number of distinct
+      preferred terms they span, then the terms reported by the most cases, then
+      the same view restricted to serious cases, then the outcome distribution.
+
+      Case counts and reaction event counts are different quantities. Use the
+      noun each supplied figure carries and never substitute one for the other.
+
+      A tabulation of this kind is conventionally organised by System Organ
+      Class. That grouping is not possible here; state so with the reason given
+      and present the terms at preferred-term level.
+
+  - id: interval_observations
+    heading: Observations Within the Interval
+    generator: llm
+    claim_level: derived
+    max_words: 260
+    requires:
+      - period.label
+      - cases.by_month
+      - cases.serious_by_month
+      - cases.top_reactions_first_half
+      - cases.top_reactions_second_half
+    tables:
+      - cases.by_month
+    instructions: |
+      Report the movements visible in the interval data: monthly case volumes,
+      and the leading reactions counted separately in each half of the interval.
+
+      State each movement with both figures and both periods present. Do not
+      explain a movement, attribute a cause, or describe any of it as a signal,
+      a trend in risk, or an absence of concern.
+    closing_note: |
+      These are reported movements in case counts within a single interval. No
+      comparison against earlier intervals was possible, and no assessment of
+      clinical significance has been made.
+
+  - id: safety_actions
+    heading: Actions Taken for Safety Reasons
+    generator: deterministic
+    renderer: absence_statement
+    requires:
+      - absent.history_of_actions
+
+  - id: limitations
+    heading: Information Not Available for This Interval
+    generator: deterministic
+    renderer: absence_statement
+    requires:
+      - absent.system_organ_class
+      - absent.expectedness
+      - absent.cumulative_prior_period
+
+  - id: data_provenance
+    heading: Data Sources and Handling
+    generator: deterministic
+    renderer: data_quality
+    requires:
+      - meta.data_quality
+      - meta.dataset_provenance
+
+  - id: case_listing
+    heading: Line Listing of Cases
+    generator: deterministic
+    renderer: case_listing
+    requires:
+      - cases.total
+      - cases.listing

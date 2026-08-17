@@ -1,0 +1,219 @@
+report_type: pader
+title: Periodic Adverse Drug Experience Report (PADER)
+product: Bisoprolol
+regulatory_basis: 21 CFR 314.80(c)(2)
+
+sections:
+
+  - id: reporting_period
+    heading: Reporting Period
+    generator: deterministic
+    renderer: header_block
+    requires:
+      - meta.report_title
+      - meta.report_type
+      - meta.regulatory_basis
+      - product.name
+      - period.label
+      - period.start
+      - period.end
+      - period.days
+      - cases.total
+
+  - id: narrative_summary
+    heading: Narrative Summary and Analysis
+    generator: llm
+    claim_level: derived
+    max_words: 320
+    requires:
+      - period.label
+      - cases.total
+      - cases.serious
+      - cases.non_serious
+      - cases.expedited
+      - cases.fatal
+      - cases.top_reactions
+      - events.total
+      - events.by_outcome
+      - absent.expectedness
+    instructions: |
+      Write the overview of the safety information received during the reporting
+      period. Cover, in this order: the volume of cases received and how they
+      split between serious and non-serious; how many met expedited reporting
+      criteria; how many reported a fatal outcome; the reactions reported most
+      often; and the pattern of reported outcomes.
+
+      Name the reporting period once, at the start.
+
+      Where a figure is marked as unavailable, state in one sentence that it
+      could not be assessed and why, using the reason given. Do not leave it out
+      and do not describe it as zero or as an absence of findings.
+
+      Do not close with a summary judgement about the product. The last sentence
+      should be a statement of reported data, not an assessment of it.
+
+  - id: case_summary
+    heading: Summary Analysis of Cases
+    generator: llm
+    claim_level: derived
+    max_words: 300
+    requires:
+      - cases.total
+      - cases.serious
+      - cases.non_serious
+      - cases.by_age_group
+      - cases.by_sex
+      - cases.by_country
+      - cases.by_reporter_qualification
+      - cases.by_report_type
+    tables:
+      - cases.by_age_group
+      - cases.by_sex
+      - cases.by_country
+      - cases.by_reporter_qualification
+      - cases.by_report_type
+    instructions: |
+      Describe the composition of the case series: patient age distribution,
+      sex, where the cases came from geographically, who reported them, and
+      whether they arrived spontaneously or from a study.
+
+      The full breakdowns appear in tables immediately after your text, so give
+      the shape of each distribution and its most substantial strata rather than
+      reciting every row.
+
+      One of the geographic entries is a region rather than a country. Report it
+      under the label given and note that those cases cannot be attributed to an
+      individual country. Do not redistribute them and do not treat the region
+      as a country.
+
+      Where a stratum is recorded as unknown, report it as a stratum. It is
+      missing information about real cases, not an absence of cases.
+
+  - id: reaction_analysis
+    heading: Reaction / Adverse Event Analysis
+    generator: llm
+    claim_level: derived
+    max_words: 340
+    requires:
+      - cases.top_reactions
+      - cases.top_serious_reactions
+      - events.total
+      - events.total_all_rows
+      - events.distinct_terms
+      - events.by_outcome
+      - absent.system_organ_class
+    tables:
+      - cases.top_reactions
+      - cases.top_serious_reactions
+      - events.by_outcome
+    instructions: |
+      Analyse the reactions reported during the period.
+
+      Two different counts are supplied and they must not be blurred. Case
+      counts say how many patients reported a term. Reaction event counts say
+      how many reaction records exist. Every figure you state must carry the
+      noun that belongs to it -- cases or reaction events -- exactly as the
+      figure is labelled.
+
+      Cover: how many reaction events were reported and across how many distinct
+      preferred terms; which terms were reported by the most cases; how the
+      picture differs when only serious cases are counted; and the distribution
+      of reported outcomes.
+
+      Reactions are reported at MedDRA preferred-term level. State that
+      System Organ Class grouping could not be performed, using the reason
+      supplied. Do not group terms into body systems yourself.
+
+  - id: serious_cases_alerts
+    heading: Serious Cases and 15-Day Alert Reports
+    generator: llm
+    claim_level: derived
+    max_words: 300
+    requires:
+      - cases.serious
+      - cases.expedited
+      - cases.fatal
+      - cases.by_seriousness_criterion
+      - cases.top_serious_reactions
+      - absent.expectedness
+      - absent.cumulative_prior_period
+    tables:
+      - cases.by_seriousness_criterion
+    instructions: |
+      Describe the serious and expedited-reporting population.
+
+      Cover: how many cases were serious; how many met expedited reporting
+      criteria; how many reported a fatal outcome; which regulatory seriousness
+      criteria were met and how often; and which reactions the serious cases
+      reported most.
+
+      The seriousness criteria are independent flags and one case may meet
+      several, so those counts total more than the number of serious cases. Say
+      so explicitly rather than presenting them as a partition.
+
+      Two figures the regulation expects are unavailable here: whether reactions
+      were labelled or unlabelled, and cumulative counts from earlier periods.
+      State both as unavailable with the reasons supplied. Neither is zero.
+
+  - id: trends
+    heading: Trends and Important Observations
+    generator: llm
+    claim_level: derived
+    max_words: 320
+    requires:
+      - period.label
+      - cases.by_month
+      - cases.serious_by_month
+      - cases.top_reactions_first_half
+      - cases.top_reactions_second_half
+    tables:
+      - cases.by_month
+      - cases.top_reactions_first_half
+      - cases.top_reactions_second_half
+    instructions: |
+      Surface the movements in the reported data that a reviewer should look at.
+
+      You are given monthly case volumes and the leading reactions counted
+      separately in each half of the period. Report the movements that are
+      largest in the supplied figures: months that stand out in volume, and
+      terms whose case count differs most between the two halves.
+
+      Phrase every movement as a statement of what was reported, with both
+      figures and both periods present. "Cases reporting X fell from 48 in the
+      first half of the period to 32 in the second" is the form required.
+
+      A change in reporting frequency is not evidence about the product. Do not
+      explain a movement, do not attribute it to a cause, do not call it an
+      increase in risk, and do not characterise any of it as a signal or as
+      reassurance. Report the movement and stop.
+
+      Do not describe a stratum as over-represented or a population as
+      disproportionately affected. Without exposure data those words are not
+      supportable, and no exposure data was supplied.
+    closing_note: |
+      The observations above are reported movements in case counts. They have not
+      been assessed for clinical significance, and are presented for evaluation by
+      a qualified reviewer.
+
+  - id: history_of_actions
+    heading: History of Actions Taken for Safety Reasons
+    generator: deterministic
+    renderer: absence_statement
+    requires:
+      - absent.history_of_actions
+
+  - id: methods_and_data_quality
+    heading: Methods and Data Quality
+    generator: deterministic
+    renderer: data_quality
+    requires:
+      - meta.data_quality
+      - meta.dataset_provenance
+
+  - id: case_index
+    heading: Case Index
+    generator: deterministic
+    renderer: case_listing
+    requires:
+      - cases.total
+      - cases.listing
